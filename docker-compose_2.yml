@@ -1,7 +1,7 @@
 volumes:
-  n8n_storage:
-  postgres_storage:
-  qdrant_storage:
+  n8n_storage_2:
+  postgres_storage_2:
+  qdrant_storage_2:
 
 networks:
   demo:
@@ -32,7 +32,7 @@ services:
       - POSTGRES_PASSWORD
       - POSTGRES_DB
     volumes:
-      - postgres_storage:/var/lib/postgresql/data
+      - postgres_storage_2:/var/lib/postgresql/data
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
       interval: 5s
@@ -59,9 +59,9 @@ services:
     container_name: n8n_2
     restart: unless-stopped
     ports:
-      - 5679:5679
+      - 5678:5678
     volumes:
-      - n8n_storage:/home/node/.n8n
+      - n8n_storage_2:/home/node/.n8n
       - ./n8n/backup:/backup
       - ./shared:/data/shared
     depends_on:
@@ -77,6 +77,6 @@ services:
     networks: ['demo']
     restart: unless-stopped
     ports:
-      - 6334:6334
+      - 6333:6333
     volumes:
-      - qdrant_storage:/qdrant/storage
+      - qdrant_storage_2:/qdrant/storage
