@@ -77,6 +77,6 @@ services:
     networks: ['demo']
     restart: unless-stopped
     ports:
-      - 6333:6333
+      - 6334:6333
     volumes:
       - qdrant_storage_2:/qdrant/storage
