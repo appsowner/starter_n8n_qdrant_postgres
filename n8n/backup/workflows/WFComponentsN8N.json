@@ -1,0 +1,1943 @@
+{
+  "name": "WFComponentsN8N",
+  "nodes": [
+    {
+      "parameters": {
+        "content": " # Con más de 400 integraciones con las herramientas mas usadas de internet",
+        "height": 1660,
+        "width": 1180,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2680,
+        -640
+      ],
+      "id": "6a17a985-a731-4426-ae0a-e03d25653200",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.linkedIn",
+      "typeVersion": 1,
+      "position": [
+        -2620,
+        -240
+      ],
+      "id": "c93aaf7e-ecbb-4d19-baa5-a806cbb3043e",
+      "name": "LinkedIn"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "filters": {}
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2620,
+        -460
+      ],
+      "id": "1a9b09ac-02e2-47f2-ac9f-59b74a1e4e9f",
+      "name": "Gmail Trigger"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "triggerOn": "specificFile",
+        "fileToWatch": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleDriveTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2400,
+        -460
+      ],
+      "id": "4be7827b-1dbf-42e6-97fe-98d709b7855e",
+      "name": "Google Drive Trigger"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "calendarId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "triggerOn": "eventStarted",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2180,
+        -460
+      ],
+      "id": "9bfa2802-fbd5-4dd4-8da7-ef0c2354d116",
+      "name": "Google Calendar Trigger"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1960,
+        -460
+      ],
+      "id": "4d9c091d-de88-46a5-b9ac-a7897e3d69a4",
+      "name": "Google Sheets Trigger"
+    },
+    {
+      "parameters": {
+        "propertyId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "metricsGA4": {
+          "metricValues": [
+            {}
+          ]
+        },
+        "dimensionsGA4": {
+          "dimensionValues": [
+            {}
+          ]
+        },
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.googleAnalytics",
+      "typeVersion": 2,
+      "position": [
+        -1740,
+        -460
+      ],
+      "id": "c9f966d3-4eeb-498a-91c1-95a7e4753ba3",
+      "name": "Google Analytics"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.facebookGraphApi",
+      "typeVersion": 1,
+      "position": [
+        -2400,
+        -240
+      ],
+      "id": "e789b689-5dc5-4fcb-82bc-8123f526e137",
+      "name": "Facebook Graph API"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ]
+      },
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2180,
+        -240
+      ],
+      "id": "e7c66b41-8c61-4c89-9b08-c6ef0e18e93a",
+      "name": "WhatsApp Trigger",
+      "webhookId": "75d20fa3-deb3-4742-bb89-44457419cf6b"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mailchimp",
+      "typeVersion": 1,
+      "position": [
+        -1960,
+        -240
+      ],
+      "id": "91150bce-76ca-40ad-969d-3586c830003e",
+      "name": "Mailchimp"
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        -1740,
+        -240
+      ],
+      "id": "e7ec0809-b6d1-4e67-857a-b34260053bd9",
+      "name": "Microsoft Outlook",
+      "webhookId": "a3863f2e-423a-4175-a155-048043bec094"
+    },
+    {
+      "parameters": {
+        "pageId": {
+          "__rl": true,
+          "mode": "url",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        -2620,
+        -20
+      ],
+      "id": "e60fe8b0-187b-4764-9c7f-1fb81e888449",
+      "name": "Notion"
+    },
+    {
+      "parameters": {
+        "operation": "archive"
+      },
+      "type": "n8n-nodes-base.mondayCom",
+      "typeVersion": 1,
+      "position": [
+        -2400,
+        -20
+      ],
+      "id": "c60a8fa1-07c9-435a-93eb-1ae063001cdf",
+      "name": "Monday.com"
+    },
+    {
+      "parameters": {
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        -2180,
+        -20
+      ],
+      "id": "8deec5fa-43b4-4a13-be19-225b72b68987",
+      "name": "Slack",
+      "webhookId": "5db8a6f9-1b64-463e-b995-c43f4cec795a"
+    },
+    {
+      "parameters": {
+        "operation": "get"
+      },
+      "type": "n8n-nodes-base.payPal",
+      "typeVersion": 1,
+      "position": [
+        -1960,
+        -20
+      ],
+      "id": "233fad77-d461-42d4-a7c3-d6203a3bc1a4",
+      "name": "PayPal"
+    },
+    {
+      "parameters": {
+        "events": [
+          "account.updated"
+        ]
+      },
+      "type": "n8n-nodes-base.stripeTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1740,
+        -20
+      ],
+      "id": "b69d2b5f-ddbf-4d4f-8e43-1df1224e39a4",
+      "name": "Stripe Trigger",
+      "webhookId": "e74f2883-42e2-4b74-99bd-5a336c53a352"
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2.1,
+      "position": [
+        -2620,
+        220
+      ],
+      "id": "f7b52ac0-296a-4629-9e9a-ad32db40de96",
+      "name": "HubSpot"
+    },
+    {
+      "parameters": {
+        "resource": "activity",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.pipedrive",
+      "typeVersion": 1,
+      "position": [
+        -2400,
+        220
+      ],
+      "id": "944eef63-9425-4a67-a90b-72fbf694c86b",
+      "name": "Pipedrive"
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "additionalFields": {},
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.highLevel",
+      "typeVersion": 2,
+      "position": [
+        -2180,
+        220
+      ],
+      "id": "51f91e9f-eb02-4db4-b684-565a4a0ebf2b",
+      "name": "HighLevel"
+    },
+    {
+      "parameters": {
+        "resource": "product",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.shopify",
+      "typeVersion": 1,
+      "position": [
+        -1960,
+        220
+      ],
+      "id": "0f1a7ee9-d4ee-429e-9a37-2c2616d92d5a",
+      "name": "Shopify"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2620,
+        460
+      ],
+      "id": "a6eeedb9-5157-4234-af97-8b6560e6fafe",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "path": "407483ed-16c0-45fc-adc2-2434367cd127",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -2400,
+        460
+      ],
+      "id": "f1ed8bef-56eb-4665-b35a-cc9e36c0def3",
+      "name": "Webhook",
+      "webhookId": "407483ed-16c0-45fc-adc2-2434367cd127"
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "tableName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "additionalFields": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgresTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2180,
+        460
+      ],
+      "id": "8f931c09-47fb-43bd-9946-334c1e5023bf",
+      "name": "Postgres Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "aggregate"
+      },
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1.1,
+      "position": [
+        -1960,
+        460
+      ],
+      "id": "4c69ebc2-b451-40e4-b2bb-b0fff8d938a6",
+      "name": "MongoDB"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -1740,
+        460
+      ],
+      "id": "359aa536-8295-42a3-96a9-957cd18fa3f9",
+      "name": "MySQL"
+    },
+    {
+      "parameters": {
+        "resource": "channelMessage",
+        "teamId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "channelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftTeams",
+      "typeVersion": 2,
+      "position": [
+        -1740,
+        220
+      ],
+      "id": "b2d6fe1d-d93f-46b9-9964-bc9413252389",
+      "name": "Microsoft Teams"
+    },
+    {
+      "parameters": {
+        "content": "# Triggers ( Disparadores )\n## Un trigger en n8n es un punto de inicio para un flujo de automatización. En términos simples, es como un \"disparador\" que hace que un proceso comience automáticamente cuando ocurre algo específico.\n\n# ¿Para qué sirven los triggers?\n## * Automatizar tareas sin intervención manual.\n## * Integrar diferentes aplicaciones fácilmente.\n## * Ahorrar tiempo y reducir errores humanos.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  ## *Activa el flujo cuando recibe datos desde otra aplicación (ej. un formulario en línea).*\n\n \n\n\n\n\n\n\n\n\n\n\n\n  ## *Activa el flujo a una hora o frecuencia específica (ej. \"todos los días a las 9 AM\").*\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n## *Activa el flujo cuando llega un correo nuevo (ej. \"cuando recibo un email con el asunto 'Factura'\").*",
+        "height": 1660,
+        "width": 1240,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1360,
+        -640
+      ],
+      "id": "c81059e7-279b-492b-aa10-26c343385858",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "path": "c7cc7e36-c8b1-4e26-8b37-9b74f5e6f440",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -860,
+        -200
+      ],
+      "id": "a333aad1-355f-4f94-8232-7ee4e6ab11ba",
+      "name": "Webhook1",
+      "webhookId": "c7cc7e36-c8b1-4e26-8b37-9b74f5e6f440"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -840,
+        40
+      ],
+      "id": "962093fa-3471-44d7-a6ed-fd256e1dd5a6",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2,
+      "position": [
+        -840,
+        300
+      ],
+      "id": "dca1ca7b-6b1b-4488-ac6f-70fed8b2b0d7",
+      "name": "Email Trigger (IMAP)"
+    },
+    {
+      "parameters": {
+        "content": " # Nodos Condicionales",
+        "height": 1660,
+        "width": 780,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        -640
+      ],
+      "id": "9245e879-33e0-4f6c-bbe2-aee18719bb20",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "25ef59a1-5a84-4958-a2b5-3efbeb676238",
+              "leftValue": "",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        260,
+        -520
+      ],
+      "id": "0a86891a-ccbe-420a-8312-dc87049ae5cd",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        260,
+        -220
+      ],
+      "id": "10130d08-2e6b-4a2b-b1df-699125e626a7",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "6e0c4ae6-d7a2-435e-8581-40dab750d800",
+              "leftValue": "",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        260,
+        60
+      ],
+      "id": "9871881b-a947-46eb-9bae-4f2e265f0f4f",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        -500
+      ],
+      "id": "fa3a76e8-d48e-4d9b-b4cb-ae8675b0b570",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        1080,
+        -180
+      ],
+      "id": "3975c797-f0de-4d21-8e4d-63043d278b29",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        140
+      ],
+      "id": "0147ee14-aa6c-4a9f-b1c2-78461f78f132",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        460
+      ],
+      "id": "bc588fff-a024-4cb5-849b-3845fd228012",
+      "name": "Limit"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        260,
+        640
+      ],
+      "id": "6aa44cf4-f74e-4232-b627-29d2537b9f1b",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1720,
+        -520
+      ],
+      "id": "60602ca3-df5e-45bd-8e6a-c37b1b16f012",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        1720,
+        -260
+      ],
+      "id": "f4eb34f4-6852-4d67-8e89-bd1b66e4dbd3",
+      "name": "Date & Time"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1720,
+        0
+      ],
+      "id": "c5b94cae-41ed-46b5-b02a-880ae63ffc8c",
+      "name": "Code"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        260,
+        340
+      ],
+      "id": "a5c8b016-3c20-4e38-86c0-3b2adb202692",
+      "name": "Wait",
+      "webhookId": "89f98189-8bff-4058-bb6f-458b8e6fa66a"
+    },
+    {
+      "parameters": {
+        "content": " # Nodos Control de datos del flujo",
+        "height": 1660,
+        "width": 780,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        760,
+        -640
+      ],
+      "id": "341f675c-4a8b-455e-8cd6-96f29ba5b540",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": " # Nodos utilidades & transformacion datos",
+        "height": 1660,
+        "width": 780,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        -640
+      ],
+      "id": "e734ef08-3e0f-4ea0-a73a-488f335b6670",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "operation": "compress"
+      },
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1,
+      "position": [
+        1720,
+        220
+      ],
+      "id": "e0e4099f-56ae-4780-9db1-67367493abf5",
+      "name": "Compression"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1720,
+        460
+      ],
+      "id": "389246e8-0f75-43ce-9efa-0d88ce3f6a5c",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1720,
+        720
+      ],
+      "id": "f2cdf27e-c05d-43dd-a2e5-a6befc395ac1",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        740
+      ],
+      "id": "2707b9a1-a546-4159-9687-8d5537ad5f5f",
+      "name": "Sort"
+    },
+    {
+      "parameters": {
+        "content": "## Inteligencia Artificial\n** N8N tiene la capacidad de integrar servicios y modelos avanzados que permiten a las automatizaciones comprender, procesar y generar información de manera similar a cómo lo haría un ser humano. Esto se logra a través de nodos que se conectan a APIs de IA, como las de OpenAI, Google Cloud, IBM Watson, Azure y Hugging Face, entre otros.\n[Guide](https://docs.n8n.io/workflows/sticky-notes/)",
+        "height": 1880,
+        "width": 5060,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2680,
+        1120
+      ],
+      "id": "0c67a628-ff47-47a0-9961-93c24057357c",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "## Utilidades\n",
+        "height": 1700,
+        "width": 740,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2540,
+        1240
+      ],
+      "id": "65bfe6ec-f643-470a-a550-54ea1d810624",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1,
+      "position": [
+        -2320,
+        1340
+      ],
+      "id": "605a002d-3bc7-4da9-b10f-2dea83cfe7e2",
+      "name": "Text Classifier"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+      "typeVersion": 1,
+      "position": [
+        -2320,
+        1640
+      ],
+      "id": "affaee7b-3c62-4725-bf36-426bb443da99",
+      "name": "Information Extractor"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+      "typeVersion": 1,
+      "position": [
+        -2320,
+        1920
+      ],
+      "id": "83abf0e6-c22d-4e35-a375-c2f9f5eace82",
+      "name": "Sentiment Analysis"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainSummarization",
+      "typeVersion": 2,
+      "position": [
+        -2320,
+        2240
+      ],
+      "id": "6fb2b048-cee0-49d1-982a-535059fbb762",
+      "name": "Summarization Chain"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "typeVersion": 1.4,
+      "position": [
+        -2320,
+        2580
+      ],
+      "id": "014a71e2-3fa2-4c5a-a9d4-5cd1da8da0cf",
+      "name": "Question and Answer Chain"
+    },
+    {
+      "parameters": {
+        "content": "## Agentes Básicos & LLM\n",
+        "height": 1700,
+        "width": 740,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1740,
+        1240
+      ],
+      "id": "defec7e7-3b12-4306-8e0a-2b0fc721d317",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -1640,
+        1720
+      ],
+      "id": "d1c9afde-dc77-49cf-a56f-ff8e1ee3bf9a",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "operation": "create",
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -1220,
+        1720
+      ],
+      "id": "50c61010-3b38-4ad9-a763-0263eb3ba8da",
+      "name": "OpenAI"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -1520,
+        1360
+      ],
+      "id": "3f1b106c-8963-470b-bb28-d84df6af60a3",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        -1500,
+        2060
+      ],
+      "id": "14357cc9-56da-46c0-b928-e804b7e537e1",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "content": "## Memoria y Base de datos Vectoriales",
+        "height": 1700,
+        "width": 740,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -940,
+        1240
+      ],
+      "id": "cecf0f07-975e-4930-98e1-a7e8d495ef67",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "mode": "insert"
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        1360
+      ],
+      "id": "83a56db9-c218-443a-bbee-24d1b286c0d7",
+      "name": "In-Memory Vector Store"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "pineconeIndex": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        1600
+      ],
+      "id": "e09e370d-5700-40c9-84fd-1ae64fcf9ff0",
+      "name": "Pinecone Vector Store"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        1860
+      ],
+      "id": "fce16883-acb4-4f3b-ac35-3a21968f9127",
+      "name": "Postgres PGVector Store"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "qdrantCollection": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        2120
+      ],
+      "id": "60ccfd8b-ff18-4d54-88dc-e65580760536",
+      "name": "Qdrant Vector Store"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        2400
+      ],
+      "id": "51cb117c-eca3-463f-9062-b94e51539008",
+      "name": "Supabase Vector Store"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreZep",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        2660
+      ],
+      "id": "b51c618f-1d5b-4d99-b06f-ed4ea69cd281",
+      "name": "Zep Vector Store"
+    },
+    {
+      "parameters": {
+        "content": "## Memoria Chat",
+        "height": 360,
+        "width": 820,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1240
+      ],
+      "id": "5f236bc4-3015-464c-a601-2d3dedb16b73",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "content": "## Modelos de Lenguajes LLMs",
+        "height": 1700,
+        "width": 740,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        1240
+      ],
+      "id": "d1b19939-8899-475c-806d-3fc815d50c79",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        40,
+        1360
+      ],
+      "id": "89df3763-bca1-475d-ba6d-70715ebb87d4",
+      "name": "Anthropic Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAwsBedrock",
+      "typeVersion": 1,
+      "position": [
+        320,
+        1360
+      ],
+      "id": "cecb8930-504c-4338-b98f-5f88e1e28ee8",
+      "name": "AWS Bedrock Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "position": [
+        40,
+        1560
+      ],
+      "id": "f9b4ec71-dbaf-4d5f-ba19-cd46d3a192b5",
+      "name": "Azure OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmCohere",
+      "typeVersion": 1,
+      "position": [
+        320,
+        1560
+      ],
+      "id": "a4b2f6a8-8040-41bb-af8c-8f4459cbddcb",
+      "name": "Cohere Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+      "typeVersion": 1,
+      "position": [
+        40,
+        1780
+      ],
+      "id": "6c4fe03e-79c0-47a6-8d91-b237cba35fc8",
+      "name": "DeepSeek Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        320,
+        1780
+      ],
+      "id": "8f64f9f6-9edf-4c7d-837b-fff2c60f764c",
+      "name": "Google Gemini Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        40,
+        2000
+      ],
+      "id": "9b09996d-3cb4-4d6c-a19e-dd145cb499dd",
+      "name": "Groq Chat Model"
+    },
+    {
+      "parameters": {
+        "projectId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleVertex",
+      "typeVersion": 1,
+      "position": [
+        320,
+        2000
+      ],
+      "id": "fe61f635-1117-427b-b15d-064995b06db4",
+      "name": "Google Vertex Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmOpenHuggingFaceInference",
+      "typeVersion": 1,
+      "position": [
+        40,
+        2200
+      ],
+      "id": "4d0bec6e-b804-4fc9-a876-27ad13d6a0f1",
+      "name": "Hugging Face Inference Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        320,
+        2200
+      ],
+      "id": "3525ad62-a76c-4d8e-80f6-7a1de660e1bb",
+      "name": "Mistral Cloud Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        40,
+        2440
+      ],
+      "id": "32c6847e-d364-4f8e-93f2-371f156d1f41",
+      "name": "Ollama Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmOllama",
+      "typeVersion": 1,
+      "position": [
+        320,
+        2440
+      ],
+      "id": "db8d1b90-4cd5-4917-9b19-30e11aeda1d9",
+      "name": "Ollama Model"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        40,
+        2660
+      ],
+      "id": "4e890afb-c444-4619-b48c-23b74c39885b",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        320,
+        2660
+      ],
+      "id": "d784df16-99b6-4994-9bda-3afac210545b",
+      "name": "OpenRouter Chat Model"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        860,
+        1360
+      ],
+      "id": "dbc1089d-64a4-43b8-8e33-f21ff3f5ce8e",
+      "name": "Postgres Chat Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.4,
+      "position": [
+        1080,
+        1360
+      ],
+      "id": "23f5684e-6b1d-4035-bbb8-cbe737de2319",
+      "name": "Redis Chat Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1300,
+        1360
+      ],
+      "id": "57705603-8be0-47f1-8098-26ea765fade5",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1740
+      ],
+      "id": "f2e476c2-f62c-4ae4-9007-9b68a9378988",
+      "name": "Vector Store Retriever"
+    },
+    {
+      "parameters": {
+        "content": "## Retrievers",
+        "height": 580,
+        "width": 820,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1640
+      ],
+      "id": "fe91ecc6-2395-46ad-b447-a526ac732c12",
+      "name": "Sticky Note11"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.retrieverWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        1220,
+        1980
+      ],
+      "id": "0e6f7e76-98a7-4310-8d3b-c2142575063e",
+      "name": "Workflow Retriever"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.retrieverContextualCompression",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        1740
+      ],
+      "id": "94c200b9-e89d-4b26-bebc-ce1a6ef7ca37",
+      "name": "Contextual Compression Retriever"
+    },
+    {
+      "parameters": {
+        "content": "## Embeddings",
+        "height": 580,
+        "width": 820,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        720,
+        2360
+      ],
+      "id": "e4644af4-c28e-4091-ae9a-5f386bb028cc",
+      "name": "Sticky Note12"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.embeddingsAwsBedrock",
+      "typeVersion": 1,
+      "position": [
+        780,
+        2500
+      ],
+      "id": "b71c3219-0c21-4491-b7c7-27b7269fa32a",
+      "name": "Embeddings AWS Bedrock"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        960,
+        2500
+      ],
+      "id": "fe246477-6b2c-451f-a3ca-3a68f0601215",
+      "name": "Embeddings OpenAI"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        2500
+      ],
+      "id": "305c07d6-9b5e-4906-a65d-fd5b59c562ef",
+      "name": "Embeddings Google Gemini"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        2500
+      ],
+      "id": "02eb93f6-f568-47aa-a3e7-11a8c4f87d4b",
+      "name": "Embeddings Mistral Cloud"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+      "typeVersion": 1,
+      "position": [
+        780,
+        2740
+      ],
+      "id": "80ded701-d924-4f6a-878a-20746c270dba",
+      "name": "Embeddings HuggingFace Inference"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsAzureOpenAi",
+      "typeVersion": 1,
+      "position": [
+        960,
+        2740
+      ],
+      "id": "82a74f00-5667-4d9c-b151-95a074c3d7d6",
+      "name": "Embeddings Azure OpenAI"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOllama",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        2740
+      ],
+      "id": "9dc7c5d8-3bb1-41f3-b89b-7af0a8141c29",
+      "name": "Embeddings Ollama"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        2740
+      ],
+      "id": "4c86180e-b709-459a-9aba-985285f7e888",
+      "name": "Embeddings Cohere"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.retrieverMultiQuery",
+      "typeVersion": 1,
+      "position": [
+        760,
+        1980
+      ],
+      "id": "4b1d39c2-ae57-4910-a5a4-0d337125ff45",
+      "name": "MultiQuery Retriever"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.awsS3",
+      "typeVersion": 2,
+      "position": [
+        -2620,
+        720
+      ],
+      "id": "3a9f7dbe-3544-4a88-afb0-74aef49c3de4",
+      "name": "AWS S3"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.awsLambda",
+      "typeVersion": 1,
+      "position": [
+        -2400,
+        720
+      ],
+      "id": "6b6eef07-17dc-44d0-9d77-17a6046e9d19",
+      "name": "AWS Lambda"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.awsDynamoDb",
+      "typeVersion": 1,
+      "position": [
+        -2180,
+        720
+      ],
+      "id": "e6d16c38-14b2-4744-b6a0-08abc0c22239",
+      "name": "AWS DynamoDB"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.awsSqs",
+      "typeVersion": 1,
+      "position": [
+        -1960,
+        720
+      ],
+      "id": "7064ae07-cf3b-4b5c-9e5c-8fc2cd006bd6",
+      "name": "AWS SQS"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.awsTranscribe",
+      "typeVersion": 1,
+      "position": [
+        -1740,
+        720
+      ],
+      "id": "5ece5503-a5dc-48a0-8f99-1db7c436f829",
+      "name": "AWS Transcribe"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        2060,
+        -520
+      ],
+      "id": "dac20073-c09e-40ee-b004-73b44d5eee7b",
+      "name": "Read/Write Files from Disk"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        2060,
+        -260
+      ],
+      "id": "9184fc67-9e67-4ba0-b5aa-74a1de5bad43",
+      "name": "Crypto"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        2060,
+        0
+      ],
+      "id": "75f0fdd4-a0a7-4854-9c0d-d5a8f84442cd",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "operation": "resize",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        2060,
+        220
+      ],
+      "id": "b205cba5-e03e-4632-8248-e0dd7ec2c20d",
+      "name": "Edit Image"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        2060,
+        460
+      ],
+      "id": "d3a88e43-9bf9-41ba-bef5-19182a0f293d",
+      "name": "Markdown"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        2060,
+        720
+      ],
+      "id": "c2931e08-d7a2-4ebd-8f59-d5d23a8ce8ba",
+      "name": "XML"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1400,
+        2400
+      ],
+      "id": "b50ef06f-9ef6-4d04-9858-d229d23780c4",
+      "name": "When chat message received",
+      "webhookId": "83de670b-94ca-4fb2-a2ba-508becdf87f4"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Google Sheets Trigger": {
+      "main": [
+        []
+      ]
+    },
+    "LinkedIn": {
+      "main": [
+        []
+      ]
+    },
+    "WhatsApp Trigger": {
+      "main": [
+        []
+      ]
+    },
+    "Mailchimp": {
+      "main": [
+        []
+      ]
+    },
+    "Microsoft Outlook": {
+      "main": [
+        []
+      ]
+    },
+    "Notion": {
+      "main": [
+        []
+      ]
+    },
+    "Slack": {
+      "main": [
+        []
+      ]
+    },
+    "Google Analytics": {
+      "main": [
+        []
+      ]
+    },
+    "HubSpot": {
+      "main": [
+        []
+      ]
+    },
+    "Pipedrive": {
+      "main": [
+        []
+      ]
+    },
+    "HighLevel": {
+      "main": [
+        []
+      ]
+    },
+    "MongoDB": {
+      "main": [
+        []
+      ]
+    },
+    "MySQL": {
+      "main": [
+        []
+      ]
+    },
+    "Filter": {
+      "main": [
+        []
+      ]
+    },
+    "Switch": {
+      "main": [
+        []
+      ]
+    },
+    "Split Out": {
+      "main": [
+        []
+      ]
+    },
+    "Merge": {
+      "main": [
+        []
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        []
+      ]
+    },
+    "Limit": {
+      "main": [
+        []
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        []
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        []
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        []
+      ]
+    },
+    "Compression": {
+      "main": [
+        []
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        []
+      ]
+    },
+    "Information Extractor": {
+      "main": [
+        []
+      ]
+    },
+    "Summarization Chain": {
+      "main": [
+        []
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        []
+      ]
+    },
+    "In-Memory Vector Store": {
+      "main": [
+        []
+      ]
+    },
+    "Pinecone Vector Store": {
+      "main": [
+        []
+      ]
+    },
+    "Postgres PGVector Store": {
+      "main": [
+        []
+      ]
+    },
+    "Qdrant Vector Store": {
+      "main": [
+        []
+      ]
+    },
+    "Supabase Vector Store": {
+      "main": [
+        []
+      ]
+    },
+    "AWS S3": {
+      "main": [
+        []
+      ]
+    },
+    "AWS Lambda": {
+      "main": [
+        []
+      ]
+    },
+    "AWS DynamoDB": {
+      "main": [
+        []
+      ]
+    },
+    "AWS SQS": {
+      "main": [
+        []
+      ]
+    },
+    "Read/Write Files from Disk": {
+      "main": [
+        []
+      ]
+    },
+    "Crypto": {
+      "main": [
+        []
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Image": {
+      "main": [
+        []
+      ]
+    },
+    "Markdown": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "a58a93d9-5a72-42f2-b150-72ad0e551c8b",
+  "meta": {
+    "instanceId": "d51d8a4dcdefddbbc7714f55eed2d5fc802d868533e1c0f98a6188f4f1e72b0e"
+  },
+  "id": "HGyzeO5yiXjjQijZ",
+  "tags": []
+}
