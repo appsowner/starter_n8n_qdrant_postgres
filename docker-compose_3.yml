@@ -23,6 +23,7 @@ x-n8n: &service-n8n
     - N8N_HOST=n8n3.appsowner.app
     - N8N_PROTOCOL=https
     - WEBHOOK_TUNNEL_URL=https://n8n3.appsowner.app
+    - N8N_PORT=443
 services:
   postgres_3:
     image: postgres:16-alpine
