@@ -1,17 +1,19 @@
 volumes:
-  n8n_storage_2:
-  postgres_storage_2:
-  qdrant_storage_2:
+  n8n_storage_teacher:
+  postgres_storage_teacher:
+  qdrant_storage_teacher:
+
 
 networks:
   demo:
 
+
 x-n8n: &service-n8n
   image: n8nio/n8n:latest
-  networks: ['demo']
+  networks: [ 'demo' ]
   environment:
     - DB_TYPE=postgresdb
-    - DB_POSTGRESDB_HOST=postgres_2
+    - DB_POSTGRESDB_HOST=postgres_teacher
     - DB_POSTGRESDB_USER=${POSTGRES_USER}
     - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD}
     - N8N_DIAGNOSTICS_ENABLED=false
@@ -20,29 +22,32 @@ x-n8n: &service-n8n
     - N8N_USER_MANAGEMENT_JWT_SECRET
     - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     - N8N_RUNNERS_ENABLED=true
-
+    - N8N_HOST=n8n-teacher.appsowner.app
+    - N8N_PROTOCOL=https
+    - WEBHOOK_TUNNEL_URL=https://n8n-teacher.appsowner.app
+    - N8N_PORT=443
 services:
-  postgres_2:
+  postgres_teacher:
     image: postgres:16-alpine
-    hostname: postgres_2
-    networks: ['demo']
+    hostname: postgres_teacher
+    networks: [ 'demo' ]
     restart: unless-stopped
     environment:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
       - POSTGRES_DB
     volumes:
-      - postgres_storage_2:/var/lib/postgresql/data
+      - postgres_storage_teacher:/var/lib/postgresql/data
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
+      test: [ 'CMD-SHELL', 'pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}' ]
       interval: 5s
       timeout: 5s
       retries: 10
 
-  n8n-import_2:
+  n8n-import_teacher:
     <<: *service-n8n
-    hostname: n8n-import_2
-    container_name: n8n-import_2
+    hostname: n8n-import_teacher
+    container_name: n8n-import_teacher
     entrypoint: /bin/sh
     command:
       - "-c"
@@ -50,33 +55,33 @@ services:
     volumes:
       - ./n8n/backup:/backup
     depends_on:
-      postgres_2:
+      postgres_teacher:
         condition: service_healthy
 
-  n8n_2:
+  n8n_teacher:
     <<: *service-n8n
-    hostname: n8n_2
-    container_name: n8n_2
+    hostname: n8n_teacher
+    container_name: n8n_teacher
     restart: unless-stopped
     ports:
-      - 5679:5678
+      - 5680:5678
     volumes:
-      - n8n_storage_2:/home/node/.n8n
+      - n8n_storage_teacher:/home/node/.n8n
       - ./n8n/backup:/backup
       - ./shared:/data/shared
     depends_on:
-      postgres_2:
+      postgres_teacher:
         condition: service_healthy
-      n8n-import_2:
+      n8n-import_teacher:
         condition: service_completed_successfully
 
-  qdrant_2:
+  qdrant_teacher:
     image: qdrant/qdrant
-    hostname: qdrant_2
-    container_name: qdrant_2
-    networks: ['demo']
+    hostname: qdrant_teacher
+    container_name: qdrant_teacher
+    networks: [ 'demo' ]
     restart: unless-stopped
     ports:
-      - 6334:6333
+      - 6335:6333
     volumes:
-      - qdrant_storage_2:/qdrant/storage
+      - qdrant_storage_teacher:/qdrant/storage

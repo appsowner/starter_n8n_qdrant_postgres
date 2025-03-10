@@ -1,17 +1,19 @@
 volumes:
-  n8n_storage_3:
-  postgres_storage_3:
-  qdrant_storage_3:
+  n8n_storage_student-01:
+  postgres_storage_student-01:
+  qdrant_storage_student-01:
+
 
 networks:
   demo:
 
+
 x-n8n: &service-n8n
   image: n8nio/n8n:latest
-  networks: ['demo']
+  networks: [ 'demo' ]
   environment:
     - DB_TYPE=postgresdb
-    - DB_POSTGRESDB_HOST=postgres_3
+    - DB_POSTGRESDB_HOST=postgres_student-01
     - DB_POSTGRESDB_USER=${POSTGRES_USER}
     - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD}
     - N8N_DIAGNOSTICS_ENABLED=false
@@ -20,32 +22,32 @@ x-n8n: &service-n8n
     - N8N_USER_MANAGEMENT_JWT_SECRET
     - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     - N8N_RUNNERS_ENABLED=true
-    - N8N_HOST=n8n3.appsowner.app
+    - N8N_HOST=n8n-student-01.appsowner.app
     - N8N_PROTOCOL=https
-    - WEBHOOK_TUNNEL_URL=https://n8n3.appsowner.app
+    - WEBHOOK_TUNNEL_URL=https://n8n-student-01.appsowner.app
     - N8N_PORT=443
 services:
-  postgres_3:
+  postgres_student-01:
     image: postgres:16-alpine
-    hostname: postgres_3
-    networks: ['demo']
+    hostname: postgres_student-01
+    networks: [ 'demo' ]
     restart: unless-stopped
     environment:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
       - POSTGRES_DB
     volumes:
-      - postgres_storage_3:/var/lib/postgresql/data
+      - postgres_storage_student-01:/var/lib/postgresql/data
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
+      test: [ 'CMD-SHELL', 'pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}' ]
       interval: 5s
       timeout: 5s
       retries: 10
 
-  n8n-import_3:
+  n8n-import_student-01:
     <<: *service-n8n
-    hostname: n8n-import_3
-    container_name: n8n-import_3
+    hostname: n8n-import_student-01
+    container_name: n8n-import_student-01
     entrypoint: /bin/sh
     command:
       - "-c"
@@ -53,33 +55,33 @@ services:
     volumes:
       - ./n8n/backup:/backup
     depends_on:
-      postgres_3:
+      postgres_student-01:
         condition: service_healthy
 
-  n8n_3:
+  n8n_student-01:
     <<: *service-n8n
-    hostname: n8n_3
-    container_name: n8n_3
+    hostname: n8n_student-01
+    container_name: n8n_student-01
     restart: unless-stopped
     ports:
       - 5680:5678
     volumes:
-      - n8n_storage_3:/home/node/.n8n
+      - n8n_storage_student-01:/home/node/.n8n
       - ./n8n/backup:/backup
       - ./shared:/data/shared
     depends_on:
-      postgres_3:
+      postgres_student-01:
         condition: service_healthy
-      n8n-import_3:
+      n8n-import_student-01:
         condition: service_completed_successfully
 
-  qdrant_3:
+  qdrant_student-01:
     image: qdrant/qdrant
-    hostname: qdrant_3
-    container_name: qdrant_3
-    networks: ['demo']
+    hostname: qdrant_student-01
+    container_name: qdrant_student-01
+    networks: [ 'demo' ]
     restart: unless-stopped
     ports:
       - 6335:6333
     volumes:
-      - qdrant_storage_3:/qdrant/storage
+      - qdrant_storage_student-01:/qdrant/storage
