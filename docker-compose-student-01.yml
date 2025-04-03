@@ -6,6 +6,7 @@ volumes:
 
 networks:
   demo:
+    driver: bridge
 
 
 x-n8n: &service-n8n
