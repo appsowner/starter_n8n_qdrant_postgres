@@ -9,7 +9,7 @@ networks:
 
 
 x-n8n: &service-n8n
-  image: n8nio/n8n:latest
+  image: n8nio/n8n:1.85.4
   networks: [ 'demo' ]
   environment:
     - DB_TYPE=postgresdb
